@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #b0c4de, #add8e6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background: linear-gradient(135deg, #b0c4de, #add8e6); }
+    50% { background: linear-gradient(135deg, #c6e2ff, #d0f0c0); }
+    100% { background: linear-gradient(135deg, #b0c4de, #add8e6); }
+}
+
+.game-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-out;
+    width: 95%;
+    max-width: 400px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    color: #333;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin: 0 auto 20px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.grid-item {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #f4f4f9;
+    background-size: 300% 300%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.3s;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+    background-color: #dcdcdc;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#message {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    animation: fadeInMessage 2s ease-out;
+}
+
+@keyframes fadeInMessage {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
